@@ -65,7 +65,6 @@ build_sigma = function(p, var, corr) {
 
 # Helper function to allow us to run simulations across various different correlations
 # Parameters:
-# Parameters:
 #   n = Number of variables to generate
 #   p = Dimensionality
 #   var = Variance of every r.v. (we assume all r.v.s have the same variance)
