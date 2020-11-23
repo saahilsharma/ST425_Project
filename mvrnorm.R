@@ -17,9 +17,9 @@ mvrnorm = function(n, mu, sigma, use_cholesky = F) {
   if(p != ncol(sigma)) 
     stop("The dimensions of sigma and mean vector aren't the same") 
   
-  # Return an error if sigma is not positive definite
-  if(!is.positive.definite(sigma)) 
-    stop("Sigma is not positive definite")
+  # Return an error if sigma is not positive semi definite
+  if(!is.positive.semi.definite(sigma)) 
+    stop("Sigma is not positive semi definite")
   
   # First, lets generate the standard normal r.v.s., Z ~ N(0,1)
   Z = matrix(rnorm(n*p), byrow = T, ncol = p)
